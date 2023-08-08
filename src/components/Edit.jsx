@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './update.css'
 import { useLocation, useNavigate } from 'react-router-dom';
+import Nav from './Nav';
 const Edit = () => {
     
     const [Data, setData] = useState({
@@ -41,6 +42,9 @@ const Edit = () => {
     }, [])
 
     return (
+        <>
+        <Nav/>
+        
         <div className='form-main-div'>
             <form className='update-form-main d-flexr' onSubmit={handleEdit}>
                 <h3>Edit Here</h3>
@@ -84,6 +88,7 @@ const Edit = () => {
                     value='Edit' />
             </form>
         </div>
+                    </>
     );
 }
 

@@ -16,11 +16,11 @@ const Home = () => {
         localStorage.setItem('Data', JSON.stringify(data))
 
     }
-    const editData = (value) => {
+    const editData = (value,id) => {
         // setisEditPage(true)
         console.log(value)
         console.log(isEditPage)
-        navigate('./edit', { state: { value } })
+        navigate('./edit', { state: { value, id } })
     }
 
     useEffect(() => {
@@ -57,7 +57,7 @@ const Home = () => {
                                         Delete
                                     </button></td>
                                     <td><button className='edit-btn'
-                                        onClick={() => editData(value)}>
+                                        onClick={() => editData(value,index)}>
                                         Edit
                                     </button></td>
                                 </tr>

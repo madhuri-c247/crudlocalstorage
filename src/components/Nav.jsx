@@ -7,7 +7,6 @@ const Nav = () => {
         <div className='main-nav-div d-flex-r'>
             <div className='inner-nav-div d-flex-r'>
                 <NavLink to='/'>Home</NavLink>
-                <NavLink to='/edit'>Edit</NavLink>
                 <NavLink to='/add'>Add </NavLink>
             </div> 
         </div>

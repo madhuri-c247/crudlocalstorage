@@ -22,24 +22,19 @@ const Edit = () => {
         setData({
             ...Data,
             [name]: value
-
         })
     }
 
     const handleEdit =(e) =>{
         e.preventDefault();
-       console.log('editing');
-       StoredData.splice()
-
+      const temp = StoredData;
+      const filteredData =  temp.findIndex((item)=> item.id === passed.value.id)
+      temp[filteredData] = Data;
+      localStorage.setItem('Data', JSON.stringify(temp))
+       navigate('/')
     }
 
-   
-
     useEffect(() => {
-        // setStoredData(passed.value)
-        // console.log(passed.value)
-        // console.log(StoredData)
-        
         setData({
             ...passed.value
          })

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './update.css'
 import { useLocation, useNavigate } from 'react-router-dom';
+import Nav from './Nav';
 const Update = () => {
     const [StoredData, setStoredData] = useState([]);
     const [Data, setData] = useState({
@@ -48,6 +49,8 @@ const Update = () => {
     }, [])
 
     return (
+        <>
+        <Nav/>
         <div className='form-main-div'>
             <form className='update-form-main d-flexr' onSubmit={addData}>
                 <h3>Update Here</h3>
@@ -91,6 +94,7 @@ const Update = () => {
                     value='Add'/>
             </form>
         </div>
+                    </>
     );
 }
 

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Home.css'
 import { useNavigate } from 'react-router-dom';
+import Nav from './Nav';
 
 const Home = () => {
 
@@ -29,6 +30,7 @@ const Home = () => {
     }, [])
     return (
         <> 
+        <Nav/>
             <div className='table-main'>
                 <table border={1} >
                     <thead>

@@ -43,10 +43,8 @@ const Update = () => {
     const store = JSON.parse(localStorage.getItem('Data'));
         if (store) {
             setStoredData(store);
-            console.log('stored data', store)
-            console.log('stored data', StoredData)
         }
-             
+
     }, [])
 
     return (

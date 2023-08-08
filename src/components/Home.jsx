@@ -28,7 +28,7 @@ const Home = () => {
 
     }, [])
     return (
-        <> <h1 className='data-txt'>My Data</h1>
+        <> 
             <div className='table-main'>
                 <table border={1} >
                     <thead>

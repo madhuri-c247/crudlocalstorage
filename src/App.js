@@ -5,6 +5,7 @@ import Update from './components/Updat'
 import Nav from './components/Nav';
 import Error from './components/Error';
 import Edit from './components/Edit';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   return (

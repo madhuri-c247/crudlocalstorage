@@ -24,23 +24,11 @@ const Update = () => {
         })
     }
 
-    const handleEdit =() =>{
-        console.log(passed.isEditPage)
-    }
-
     const addData = (e) => {
         e.preventDefault();
         const newData = [...StoredData, Data]
-        console.log("newData : ", newData)
         setStoredData(newData)
-
         localStorage.setItem('Data', JSON.stringify(newData))
-        // localStorage.setItem('Data', JSON.stringify(Data))
-
-        //  console.log('formdata',Data)
-        //  console.log('prev data',prevData)
-        console.log('mergedd', StoredData)
-
         setData({
             id: '',
             name: '',
@@ -48,21 +36,17 @@ const Update = () => {
             number: '',
             address: ''
         })
-
          navigate('/')
     }
 
     useEffect(() => {
-       
-       
-        const store = JSON.parse(localStorage.getItem('Data'));
+    const store = JSON.parse(localStorage.getItem('Data'));
         if (store) {
             setStoredData(store);
             console.log('stored data', store)
             console.log('stored data', StoredData)
         }
-    
-      
+             
     }, [])
 
     return (

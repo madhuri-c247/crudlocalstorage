@@ -15,7 +15,6 @@ const Edit = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const passed = location.state;
-    console.log(passed,'passed')
 
     const handleChange = (e) => {
         const { name, value } = e.target

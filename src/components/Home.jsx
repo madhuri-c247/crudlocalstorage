@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import './Home.css'
 import { useNavigate } from 'react-router-dom';
@@ -7,7 +6,6 @@ const Home = () => {
 
     const [Data, setData] = useState([])
     const navigate = useNavigate();
-    const [isEditPage, setisEditPage] = useState(false);
 
     const deleteData = (id) => {
         const temp = Data
@@ -17,15 +15,16 @@ const Home = () => {
 
     }
     const editData = (value,id) => {
-        // setisEditPage(true)
-        console.log(value)
-        console.log(isEditPage)
         navigate('./edit', { state: { value, id } })
     }
 
     useEffect(() => {
-        console.log('here would be my data')
-        setData(JSON.parse(localStorage.getItem('Data')));
+        const mydata = JSON.parse(localStorage.getItem('Data'))
+        if(mydata){
+            setData(mydata);
+        }else{
+            alert(`Local Storage is Empty` );
+        }
 
     }, [])
     return (
